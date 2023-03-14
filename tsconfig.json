@@ -1,0 +1,50 @@
+{
+    //  用来指定哪些文件需要被编译
+    "include":[
+        // 任意文件夹下的任意文件
+        "./**/*"
+    ],
+
+    //  用来指定那些文件不需要被编译,有默认值，
+    "exclude": [],
+
+    //    这两个不常用
+    //    "extends":"./package.json",
+    //    "file":{},
+
+    // 编译器的选项，里面有很多子选项
+    "compilerOptions": {
+        // 指定编译后的js的版本
+        "target": "ES6",
+        // 指定要使用的模块化的规范
+        "module": "AMD",
+        // 指定项目中使用到的库，一般不需要改
+        "lib": ["esnext"],
+        // 指定编译后文件所在的目录
+        "outDir": "",
+        // 将编译后的代码合并为一个文件,一般不用，用打包工具
+        "outFile": "",
+        // 是否对待编译路径下的js 进行编译
+        "allowJs": false,
+        // 是否检查js代码是否符合语法规范
+        "checkJs": false,
+        // 是否移除注释
+        "removeComments": false,
+        // 不生成编译后的文件
+        "noEmit": false,
+        // 当有错误的时候不生成编译文件
+        "noEmitOnError": false,
+
+        // 所有严格检查的总开关
+        "strict": false,
+        // 是否设置编译后的js使用严格模式，有模块导入到处的时候默认打开，看不出区别
+        "alwaysStrict": false,
+        // 检查代码，不允许隐式any类型出现
+        "noImplicitAny": true,
+        // 不允许不明确类型的 this
+        "noImplicitThis": false,
+        // 严格的检查空值
+        "strictNullChecks": false
+        
+    }
+}
